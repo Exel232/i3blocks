@@ -47,7 +47,7 @@
 	_(min_width,             1024, PROP_I3BAR | PROP_STRING | PROP_NUMBER) \
 	_(align,                 8,    PROP_I3BAR | PROP_STRING) \
 	_(name,                  32,   PROP_I3BAR | PROP_STRING) \
-	_(instance,              32,   PROP_I3BAR | PROP_STRING) \
+	_(instance,              256,  PROP_I3BAR | PROP_STRING) \
 	_(urgent,                8,    PROP_I3BAR | PROP_BOOLEAN) \
 	_(separator,             8,    PROP_I3BAR | PROP_BOOLEAN) \
 	_(separator_block_width, 8,    PROP_I3BAR | PROP_NUMBER) \
@@ -84,6 +84,7 @@ struct block {
 #define INSTANCE(_block)	(_block->default_props.instance)
 #define COMMAND(_block)		(_block->default_props.command)
 #define LABEL(_block)		(_block->default_props.label)
+#define INTERVAL(_block)	(_block->default_props.interval)
 
 /* Shortcuts to update */
 #define FULL_TEXT(_block)	(_block->updated_props.full_text)
